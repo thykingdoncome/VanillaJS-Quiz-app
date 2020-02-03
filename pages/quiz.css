@@ -1,0 +1,146 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+a {
+  color: black;
+}
+
+body {
+  font-family: sans-serif;
+  background: white;
+}
+
+#container {
+  padding: 0 1em;
+  width: 70%;
+  margin: 5em auto 1em;
+  position: relative;
+  min-height: 100vh;
+}
+
+#header {
+  font-family: cursive;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1em;
+  color: black;
+  background: rgb(122, 214, 202);
+  word-spacing: 1em;
+  letter-spacing: 10px;
+  width: 100%;
+  text-shadow: 2px 3px 4px black;
+}
+
+.question {
+  font-size: 1.5em;
+  margin: 10px auto;
+  color: black;
+  text-align: center;
+  background: rgb(160, 158, 158);
+  padding: 1em;
+  border-radius: 4px;
+  width: 80%;
+
+}
+
+.answers {
+  margin: 2em 0;
+  position: relative;
+  left: 10%;
+  display: block;
+
+}
+
+.answers label {
+  display: block;
+  margin-bottom: 15px;
+  background: rgb(231, 229, 229);
+  width: 80%;
+  padding: 2em 1em;
+  border-radius: 4px;
+
+}
+
+.slide {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s;
+  margin: 0 auto;
+}
+
+.active-slide {
+  opacity: 1;
+  z-index: 2;
+}
+
+#buttons {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 1em auto;
+  position: absolute;
+  top: 70vh;
+  padding-left: 8.5%;
+  padding-right: 10%;
+}
+
+button {
+  font-family: sans-serif;
+  font-size: 10px;
+  background: black;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-left: 2em;
+  transition: .3s;
+
+}
+
+button:hover {
+  background-color: rgb(89, 93, 95);
+}
+
+#previous, #next, #submit {
+  outline: 0;
+  border: none;
+  font-weight: bold;
+}
+
+#scores {
+  font-family: ;
+  position: absolute;
+  bottom: 50px;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#scores div {
+  padding: 1em 0;
+}
+
+#results {
+  margin-top:2em ;
+}
+
+.fixed-bottom {
+  text-align: center;
+  background-color: gray;
+  position: fixed;
+  color: black;
+  bottom: 0;
+  width: 100%;
+  padding: 1em;
+}
