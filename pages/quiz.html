@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Monoton" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4d799c321f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="quiz.css">
     <title>Quiz App</title>
 </head>
@@ -21,7 +22,7 @@
 
     <div id="container">
 
-        <div class="quiz-containe">
+        <div>
 
             <div id="quiz">
 
@@ -40,11 +41,23 @@
         </div>
 
       
-        <div id="scores">
+        <div id="scores" class="scores">
+
+            <div class="modal_header">
+              <div>
+                <h1> Result</h1>
+              </div>
+                <div>
+                    <a href="#" id="close"><h1>
+                        <i class="far fa-window-close"></i>
+                    </h1></a>
+                </div>
+            </div>
 
             <div id="results"></div>
 
             <div id="message"></div>
+
 
         </div>
       
