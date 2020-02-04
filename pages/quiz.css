@@ -24,15 +24,16 @@ body {
 
 #header {
   font-family: cursive;
-  text-align: center;
   margin: 0 auto;
-  padding: 1em;
+  padding: 1em 5em 0;
   color: black;
   background: rgb(122, 214, 202);
-  word-spacing: 1em;
-  letter-spacing: 10px;
+  word-spacing: .3em;
+  letter-spacing: 6px;
   width: 100%;
   text-shadow: 2px 3px 4px black;
+  display: flex;
+  justify-content: space-between;
 }
 
 .question {
@@ -44,15 +45,12 @@ body {
   padding: 1em;
   border-radius: 4px;
   width: 80%;
-
 }
 
 .answers {
   margin: 2em 0;
   position: relative;
   left: 10%;
-  display: block;
-
 }
 
 .answers label {
@@ -85,9 +83,9 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin: 1em auto;
+  margin: 1em auto 0;
   position: absolute;
-  top: 70vh;
+  top: 65vh;
   padding-left: 8.5%;
   padding-right: 10%;
 }
@@ -104,7 +102,6 @@ button {
   margin-bottom: 20px;
   margin-left: 2em;
   transition: .3s;
-
 }
 
 button:hover {
@@ -121,13 +118,10 @@ button:hover {
 
 #scores {
   font-family: ;
-  /* position: absolute; */
-
   margin: 0 auto;
   width: 50%;
   margin-top: 20px;
   border-radius: 5px;
-  /* padding: 0 1em; */
 }
 
 #scores div {
