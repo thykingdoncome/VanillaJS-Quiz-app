@@ -3,102 +3,102 @@
 
   //Array of questions
   const myQuestions = [{
-      question: "Which of these is not a Back-end Framework?",
+      question: "Which of these is the correct way to create an Array?",
       answers: {
-        a: "Ruby on Rails",
-        b: "React.JS",
-        c: "MongoDB",
-        d: "Mongoose"
+        a: "let colors = [blue green black]",
+        b: "let colors = {blue, green, black}",
+        c: "let colors = ['blue', 'green', 'black']",
+        d: "let colors = ('blue', 'green', 'black')"
       },
-      correctAnswer: "b"
+      correctAnswer: "c"
     },
     {
-      question: "Which of these is not a Programming language?",
+      question: "Which of these is not a comparison operator?",
       answers: {
-        a: "Python",
-        b: "SQL",
-        c: "PHP",
-        d: "C#"
+        a: "<",
+        b: ">",
+        c: "=",
+        d: "!="
       },
-      correctAnswer: "b"
+      correctAnswer: "c"
     },
     {
-      question: "The Swift programming language first appeared in what year?",
+      question: "Which of these is not a JavaScript Framework",
       answers: {
-        a: "2014",
-        b: "2015",
-        c: "2013",
-        d: "None of the above"
+        a: "Flask",
+        b: "Angular",
+        c: "Ember",
+        d: "Backbone"
       },
       correctAnswer: "a"
     },
     {
-      question: "Who was the first United States president to be impeached?",
+      question: "What is the result of the following:  '1' - - '1';?",
       answers: {
-        a: "Abraham Lincoln",
-        b: "James Butchanan",
-        c: "Jimmy Cater",
-        d: "Andrew Johnson"
+        a: "0",
+        b: "'11'",
+        c: "11",
+        d: "2" 
       },
       correctAnswer: "d"
     },
     {
-      question: "Who is the founder of Apple?",
+      question: "Who is the founder of JavaScript?",
       answers: {
         a: "Mark Zuckerberg",
         b: "Bill Gates",
         c: "Steve Jobs",
         d: "None of the above"
       },
-      correctAnswer: "c"
-    },
-    {
-      question: "Which of these is a Mark-up Language?",
-      answers: {
-        a: "Sass",
-        b: "html",
-        c: "Java",
-        d: "All of the above"
-      },
-      correctAnswer: "b"
-    },
-    {
-      question: "Which programming language uses the most number of frameworks?",
-      answers: {
-        a: "SQL",
-        b: "Java",
-        c: "JavaScript",
-        d: "C++"
-      },
-      correctAnswer: "c"
-    },
-    {
-      question: "Who designed the Python Programming Language?",
-      answers: {
-        a: "James Gosling",
-        b: "Ada Lovelace",
-        c: "Larry Wall",
-        d: "Guido van Rossum"
-      },
       correctAnswer: "d"
     },
     {
-      question: "Which Company became the first ever 1 Trillion dollar company in the U.S?",
+      question: "What is the result: new String(\"This is a string\") instanceof String; ?",
       answers: {
-        a: "Microsoft",
-        b: "Google",
-        c: "Apple",
-        d: "None of the above"
+        a: "true",
+        b: "false",
+        c: "typeError",
+        d: "syntaxError"
+      },
+      correctAnswer: "a"
+    },
+    {
+      question: "How do you add a multiline comment in JavaScript?",
+      answers: {
+        a: "//This is a comment",
+        b: "<!--This is a comment-->",
+        c: "/*This is a comment*/",
+        d: "All of the above"
       },
       correctAnswer: "c"
     },
     {
-      question: "Who was the first ever computer programmer?",
+      question: "How do you create a function in JavaScript?",
       answers: {
-        a: "Grace Hooper",
-        b: "Betty Holberton",
-        c: "Snoop Dog",
-        d: "Ada Lovelace"
+        a: "function myFunction()",
+        b: "function = myFunction()",
+        c: "function: myFunction{ }",
+        d: "None of the above"
+      },
+      correctAnswer: "a"
+    },
+    {
+      question: "What is the result?: String('Hello') === 'Hello';",
+      answers: {
+        a: "true",
+        b: "false",
+        c: "referrenceError",
+        d: "None of the above"
+      },
+      correctAnswer: "a"
+    },
+    {
+      question: "What is the result?: NaN === NaN;",
+      answers: {
+        a: "true",
+        b: "NaN",
+        c: "undefined",
+        d: "false"
       },
       correctAnswer: "d"
     }
@@ -257,19 +257,22 @@
     // close modal
     closeOverlay.addEventListener('click', () => {
       modal.style.display = "none";
-      window.location = "quiz.html";
+      // window.location = "quiz.html";
     });
 
     // close modal when user clicks outside of the modal
     window.addEventListener('mouseup', (event) => {
       if (event.target != modal && event.target.parentNode != modal) {
         modal.style.display = "none";
-        window.location = "quiz.html";
+        submit.setAttribute("disabled", true);
+        submit.style.background = "gray";
+
+        // window.location = "quiz.html";
       }
     });
   });
 
-  // Restart quiz onclick of restart button
+  //Restart quiz onclick of restart button
   restart.addEventListener('click', () => window.location = 'quiz.html');
 
 })();
