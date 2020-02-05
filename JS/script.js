@@ -66,7 +66,7 @@
       question: "How do you add a multiline comment in JavaScript?",
       answers: {
         a: "//This is a comment",
-        b: "<--This is a comment--!>",
+        b: "<--This is a comment+>",
         c: "/*This is a comment*/",
         d: "All of the above"
       },
@@ -122,7 +122,7 @@
           // for each available answer...
           answers.push(
             `<label>
-              <input id="isChecked" type="radio" name="question${questionNumber} "value="${letter}">
+              <input type="radio" name="question${questionNumber}" value="${letter}">
               ${letter} :
               ${currentQuestion.answers[letter]}
               </label>`
@@ -248,7 +248,6 @@
     // close modal
     closeOverlay.addEventListener('click', () => {
       modal.style.display = "none";
-      // window.location = "quiz.html";
     });
 
     // close modal when user clicks outside of the modal
@@ -257,8 +256,6 @@
         modal.style.display = "none";
         submit.setAttribute("disabled", true);
         submit.style.background = "gray";
-
-        // window.location = "quiz.html";
       }
     });
   });
