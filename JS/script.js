@@ -38,7 +38,7 @@
         a: "0",
         b: "'11'",
         c: "11",
-        d: "2" 
+        d: "2"
       },
       correctAnswer: "d"
     },
@@ -66,7 +66,7 @@
       question: "How do you add a multiline comment in JavaScript?",
       answers: {
         a: "//This is a comment",
-        b: "<!--This is a comment-->",
+        b: "<--This is a comment--!>",
         c: "/*This is a comment*/",
         d: "All of the above"
       },
@@ -118,26 +118,26 @@
         const answers = [];
         // if (checked) {
         // }
-            for (letter in currentQuestion.answers) {
-              // for each available answer...
-              answers.push(
-                `<label>
-              <input class="isChecked" type="radio" name="question${questionNumber}" value="${letter}">
+        for (letter in currentQuestion.answers) {
+          // for each available answer...
+          answers.push(
+            `<label>
+              <input id="isChecked" type="radio" name="question${questionNumber} "value="${letter}">
               ${letter} :
               ${currentQuestion.answers[letter]}
               </label>`
-              );
-            }
-            //add this questions and its answers to the output
-            output.push(
-              `<div class="slide">     
+          );
+        }
+        //add this questions and its answers to the output
+        output.push(
+          `<div class="slide">     
                   <div class="question"> ${currentQuestion.question} </div>
                   <div class="answers"> ${answers.join("")} </div>
                </div>`
-            );
+        );
       });
-  
-    quizContainer.innerHTML = output.join("");   // display output list into one string of html and put it on the page
+
+    quizContainer.innerHTML = output.join(""); // display output list into one string of html and put it on the page
   }
 
 
@@ -149,14 +149,14 @@
     //for each question 
     myQuestions.forEach((currentQuestion, questionNumber) => {
       // finding selected answers
-     
-      const answerContainer = answerContainers[questionNumber];  // looking inside the answer container for the current question
-     
-      const selector = `input[name=question${questionNumber}]:checked`;  //find which radio button is checked.
+
+      const answerContainer = answerContainers[questionNumber]; // looking inside the answer container for the current question
+
+      const selector = `input[name=question${questionNumber}]:checked`; //find which radio button is checked.
       //radio button is checked
       //we can get the value of selected choice by using .value
       const userAnswer = (answerContainer.querySelector(selector) || {}).value;
-      
+
       //if answer is correct
       if (userAnswer === currentQuestion.correctAnswer) {
         numCorrect++;
@@ -214,21 +214,12 @@
   /* function to make navigation buttons work to show provious and next slides */
   const showNextSlide = () => {
     showSlide(currentSlide + 1);
-    // const checking = document.querySelector(".isChecked");
-    // if (checking.checked) {
-    // } else if (!checking.checked){
-    //   window.alert("CHoose an answer!!!")
-    // }
-    // if (document.querySelector(".isChecked").checked) {
-    //   showSlide(currentSlide + 1);
-    // }
-    // else {
-    //   window.alert("CHoose an answer!!!")
-    // }
   }
+
   const showPreviousSlide = () => {
     showSlide(currentSlide - 1);
   }
+
   const quizContainer = document.getElementById("quiz");
   const resultsContainer = document.getElementById("results");
   const scoreMessage = document.getElementById("message");
