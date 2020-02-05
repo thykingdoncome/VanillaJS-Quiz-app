@@ -6,7 +6,7 @@
 
 #container {
     background: rgb(122, 214, 202);
-    min-height: 100vh;
+    min-height: calc(100vh - 50px);
     width: 100%;
 }
 
@@ -20,10 +20,6 @@
 
 .page-content div {
     padding: 1em 0;
-}
-
-.title {
-    text-shadow: ;
 }
 
 button {
@@ -48,6 +44,7 @@ button:hover {
     width: 70%;
     letter-spacing: 5px;
     text-shadow: 2px 3px 3px gray;
+    padding-top: 3em;
 }
 
 h2 {
@@ -113,6 +110,7 @@ img {
     text-shadow: 2px 2.3px 2px rgb(39, 39, 39);
     text-transform: uppercase;
     animation: animate 3s linear infinite;
+    background-clip: padding-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }

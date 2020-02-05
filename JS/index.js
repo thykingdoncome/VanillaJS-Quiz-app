@@ -1,17 +1,17 @@
 (function() {
     const text = [
         {
-            item: 'Do you know programming?'
+            item: 'Do you know JavaScript?'
         },
         {
-            item: 'Gear up'
+            item: 'Gear up!!'
         },
 
        {
            item:  'Be the greatest'
        },
        {
-           item:  'Put your basic programming knowledge to test!'
+           item:  'Put your basic JavaScript knowledge to test!'
        }
     ]
     

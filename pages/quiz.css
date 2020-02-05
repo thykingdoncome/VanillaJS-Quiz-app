@@ -19,7 +19,7 @@ body {
   width: 70%;
   margin: 5em auto 1em;
   position: relative;
-  min-height: 100vh;
+  min-height: calc(100vh - 185px);
 }
 
 #header {
@@ -110,14 +110,13 @@ button:hover {
 
 }
 
-#previous, #next, #submit {
+#previous, #next, #submit, #restart {
   outline: 0;
   border: none;
   font-weight: bold;
 }
 
 #scores {
-  font-family: ;
   margin: 0 auto;
   width: 50%;
   margin-top: 20px;
@@ -135,7 +134,6 @@ button:hover {
   left: 50%;
   transform:translate(-50%,-50%);
   background: #fff;
-  /* text-align: center; */
   box-sizing: border-box;
   box-shadow: 0 0 20px rgba(0,0,0,.7);
   z-index: 2;
@@ -157,7 +155,6 @@ button:hover {
   box-sizing:border-box;
   display: flex;
   justify-content: space-between;
-  /* padding: .5em 1em; */
   }
 
   #close {
